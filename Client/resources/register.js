@@ -35,7 +35,7 @@ function createUser() {
         if(response.err !== undefined) {
             alert(response.err);
         } else {
-            alert("Registration Successful!!");
+            window.location.replace("index.html");
         }
         clearForm(form);
     }).catch(err => alert(err.message))
