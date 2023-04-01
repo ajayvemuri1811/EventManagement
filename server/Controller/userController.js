@@ -14,14 +14,15 @@ const createUser = async(req, res) => {
     try{
         const {email, password, conpassword} = req.body;
         if(password !== conpassword) {
-            res.status(409).send({err : 'password must be same'});
+            res.send({err : 'password must be same'});
+        } else {
+            const newUser = new userModel({
+                email, password
+            })
+            
+            await newUser.save();
+            res.status(200).send({msg : "user created successfully!!!!"});
         }
-        const newUser = new userModel({
-            email, password
-        })
-        
-        await newUser.save();
-        res.status(200).send({msg : "user created successfully!!!!"});
     }
     catch(err){
         console.log(err.message);
