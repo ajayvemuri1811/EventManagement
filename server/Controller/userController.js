@@ -1,4 +1,6 @@
 const userModel = require('../Model/User');
+const bcrypt =require('bcryptjs');
+const jwt =require('jsonwebtoken');
 
 const getAllUsers = async(req, res) => {
     try{
@@ -16,10 +18,22 @@ const createUser = async(req, res) => {
         if(password !== conpassword) {
             res.send({err : 'password must be same'});
         } else {
-            const newUser = new userModel({
-                email, password
-            })
-            
+            encryptedPassword = await bcrypt.hash(password, 10);
+            const newUser = await userModel.create({
+                email: email, // sanitize: convert email to lowercase
+                password: encryptedPassword,
+              });
+            /*const newUser = new userModel({
+                email, encryptedPassword
+            })*/
+            const token = jwt.sign(
+                { user_id: newUser._id, email },
+                process.env.TOKEN_KEY,
+                {
+                  expiresIn: "2h",
+                }
+            );
+            newUser.token = token;
             await newUser.save();
             res.status(200).send({msg : "user created successfully!!!!"});
         }

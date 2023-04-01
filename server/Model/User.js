@@ -12,7 +12,10 @@ const UserSchema = new mongoose.Schema (
             required: true,
             min : 8,
             max : 20,
-        }
+        },
+        token: { 
+            type: String 
+        },
     }, {timestamps : true}  
     // timstamps = true => will give the time of creation and updation of the object....
 );
