@@ -21,7 +21,7 @@ function loginuser() {
         "password": form.floatingPassword.value,
     }
 
-    fetch(baseURL + "/customAPI/v1/user/login", {
+    fetch(baseURL + "/customAPI/v1/login", {
         "method": "post", 
         headers: {
             "Content-Type": "application/json"
