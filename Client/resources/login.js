@@ -34,7 +34,7 @@ function loginuser() {
         if(response.err !== undefined) {
             alert(response.err);
         } else {
-            window.location.replace("index.html");
+            window.location.replace("afterlogin.html");
         }
         clearForm(form);
     }).catch(err => alert(err.message))
