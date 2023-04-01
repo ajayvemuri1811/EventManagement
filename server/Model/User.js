@@ -20,6 +20,8 @@ const UserSchema = new mongoose.Schema (
     // timstamps = true => will give the time of creation and updation of the object....
 );
 
+
+
 const User = mongoose.model("User", UserSchema)
 
 module.exports = User;

@@ -17,6 +17,7 @@ app.use(cors());
 
 
 const userRouter = require('./Routes/userRoutes');
+
 app.use('/customAPI/v1/user', userRouter);
 
 
