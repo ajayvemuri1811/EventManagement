@@ -17,8 +17,10 @@ app.use(cors());
 
 
 const userRouter = require('./Routes/userRoutes');
-
 app.use('/customAPI/v1/user', userRouter);
+
+const loginRouter = require('./Routes/loginRoutes');
+app.use('/customAPI/v1/login', loginRouter);
 
 
 //start the server

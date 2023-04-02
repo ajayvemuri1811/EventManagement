@@ -21,7 +21,7 @@ function loginuser() {
         "password": form.floatingPassword.value,
     }
 
-    fetch(baseURL + "/customAPI/v1/user/login", {
+    fetch(baseURL + "/customAPI/v1/login", {
         "method": "post", 
         headers: {
             "Content-Type": "application/json"
@@ -34,7 +34,7 @@ function loginuser() {
         if(response.err !== undefined) {
             alert(response.err);
         } else {
-            window.location.replace("index.html");
+            window.location.replace("afterlogin.html");
         }
         clearForm(form);
     }).catch(err => alert(err.message))
