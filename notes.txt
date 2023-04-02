@@ -1,0 +1,26 @@
+Node is used to run js locally
+
+REST API : architecture (API is set of rules)
+
+CRUD (Create read update Delete)
+C -> POST , R->get, U-> PUT/Patch, D->Delete
+
+
+Model View Controller (MVC architecture)
+Model->data (schemas, data related)
+View->presentation (.ss,.html, .js)
+Controller->logic (backend)
+
+
+End points are known as Routes (eg: user, product).Seperate folder is maintianed for routes
+Diff folder for middleware (eg: autherization, csrf)
+
+
+ExpressJS is used for creation of endpoints.
+cors used to request resources
+
+
+.gitignore : files which are not pushed on git(eg:.env)
+bcrypt(for encryption purpose)
+
+orm/odm...........................mongoose is odm

@@ -14,16 +14,15 @@ function clearForm(form) {
 }
 
 function registeam() {
-    const form = document.getElementById("CricketRegistartion").elements;
-
+    const form = document.getElementById("CricketRegistration").elements;
     const data = {
-        "teamName": form.team.value,
-        "enrollno": form.enrollno.value,
+        "teamname": form.teamName.value,
+        "enrollmentno": form.enrollno.value,
         "email": form.email.value,
-        "clgname": form.address.value
+        "college": form.address.value
     }
 
-    fetch(baseURL + "/customAPI/v1/cricRegis", {
+    fetch(baseURL + "/customAPI/v1/regisRouter", {
         "method": "post", 
         headers: {
             "Content-Type": "application/json"
