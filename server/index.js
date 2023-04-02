@@ -24,6 +24,10 @@ app.use('/customAPI/v1/login', loginRouter);
 
 const regisRouter = require('./Routes/regisRouter');
 app.use('/customAPI/v1/regisRouter', regisRouter);
+
+const footRouter = require('./Routes/footRouter');
+app.use('/customAPI/v1/footRouter', footRouter);
+
 //start the server
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

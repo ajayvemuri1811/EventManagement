@@ -7,6 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.108.0">
     <title>Football Registration Form</title>
+	<script src="./resources/football.js"></script>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/checkout/">
      
@@ -85,7 +86,7 @@
 	<div class="col-md-3 col-lg-2">
 	</div>
       <div class="col-md-7 col-lg-8">
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation" novalidate onsubmit="footteam()" action = "javascript:void(0)" id = "footballRegistration">
           <div class="row g-3">
             <div class="col-12">
               <label for="teamName" class="form-label">Team name</label>
