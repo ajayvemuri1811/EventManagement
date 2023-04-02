@@ -28,6 +28,9 @@ app.use('/customAPI/v1/regisRouter', regisRouter);
 const footRouter = require('./Routes/footRouter');
 app.use('/customAPI/v1/footRouter', footRouter);
 
+const badminRoutes = require('./Routes/badminRoutes');
+app.use('/customAPI/v1/badminRoutes', badminRoutes);
+
 //start the server
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
