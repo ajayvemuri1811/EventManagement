@@ -30,6 +30,6 @@ const cricregisSchema = new mongoose.Schema (
 
 
 
-const cricregis = mongoose.model("cricregis", cricregisshema)
+const cricregis = mongoose.model("cricregis", cricregisSchema);
 
 module.exports = cricregis;
